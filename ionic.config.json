@@ -1,0 +1,7 @@
+{
+  "name": "Romeo's Ionic App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
