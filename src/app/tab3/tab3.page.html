@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Romeo's better Galore but better
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,27 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="card-background-page">
+    <ion-card>
+      <ion-item>
+        <ion-avatar class="ionicavatar">
+          <img src="assets/images/romeo.jpg">
+        </ion-avatar>
+      </ion-item>
+      <div class="card-title">Romeo John Perez</div>
+    </ion-card>
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1]; let i = index">
+      <ion-avatar slot="start">
+        <ion-img src="assets/images/t1.png"></ion-img>
+      </ion-avatar>
+      <ion-label>Romeo's Gold Sword</ion-label>
+      <ion-chip color="success" outline="true">
+        <ion-label>Check</ion-label>
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+    </ion-item>
+  </ion-list>  
 </ion-content>

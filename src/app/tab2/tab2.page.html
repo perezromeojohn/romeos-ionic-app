@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Romeo's Galore but better
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +13,71 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div padding>
+    <ion-segment [(ngModel)]="itempots">
+      <ion-segment-button value="buffs">
+        Buff Item
+      </ion-segment-button>
+      <ion-segment-button value="debuffs">
+        Debuff Item
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="itempots">
+    <ion-list *ngSwitchCase="'debuffs'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/t1.png">
+        </ion-thumbnail>
+        <h2>Romeo's Gold Sword</h2>
+        <ion-badge slot="end" color="danger">lvl.20</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/t2.png">
+        </ion-thumbnail>
+        <h2>Romeo's Darn Pickaxe</h2>
+        <ion-badge slot="end" color="primary">lvl.14</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/t3.png">
+        </ion-thumbnail>
+        <h2>Romeo's Pendant</h2>
+        <ion-badge slot="end" color="warning">lvl.16</ion-badge>
+      </ion-item>
+      
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'buffs'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/t4.png">
+        </ion-thumbnail>
+        <h2>Eye of Idk</h2>
+        <ion-badge slot="end" color="warning">Def</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/t5.png">
+        </ion-thumbnail>
+        <h2>Cog of What</h2>
+        <ion-badge slot="end" color="warning">Pow</ion-badge>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/t6.png">
+        </ion-thumbnail>
+        <h2>Shield of Mediocrity</h2>
+        <ion-badge slot="end" color="warning">HP</ion-badge>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
 </ion-content>
